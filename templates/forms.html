@@ -3,20 +3,24 @@
 {% block content %}
 
 <div class="forms">
-    <form action="/" method='POST'>
-        <label for='username'>Username
-            <input type='text' id='username'/>
+    <form action="/signup" method='POST'>
+        <label>Username
+            <input type='text' name='username' value='{{username}}'required/>
+            <p class='error'>{{username_error}}</p>
         </label>
-        <label for='password'>Password
-            <input type='password' id='password'/>
+        <label>Password
+            <input type='password' name='password' value='{{password}}' required/>
+            <p class='error'>{{password_error}}</p>
         </label>
-        <label for='verify-password'>Verify Password
-            <input type='password' id='verify-password'/>
+        <label>Verify Password
+            <input type='password' name='verify_password' value='{{verify_password}}' required/>
+            <p class='error'>{{verify_error}}</p>
         </label>
-        <label for='email'> Email (optional)
-            <input type='text' id='email'/>
+        <label> Email (optional)
+            <input type='text' name='email' value='{{email}}'/>
+            <p class='error'>{{email_error}}</p>
         </label>
-        <input type='submit' id='submit'/>
+        <input type='submit' name='submit'/>
     </form>
 </div>
 

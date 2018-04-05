@@ -15,7 +15,7 @@ def signup():
 
     username = request.form['username']
     password = request.form['password']
-    verify_password = request.form['verify-password']
+    verify_password = request.form['verify_password']
     email = request.form['email']
 
     username_error = ''
@@ -51,7 +51,7 @@ def signup():
         return render_template('welcome.html', username = username)
 
     else:
-        return render_template('forms.html', username = username, password_error = password_error,
-        verify_error = verify_error, email = email, email_error = email_error)
+        return render_template('forms.html', username = username, username_error = username_error, 
+        password_error = password_error, verify_error = verify_error, email = email, email_error = email_error)
 
 app.run()

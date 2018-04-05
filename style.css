@@ -4,9 +4,9 @@
 
 .forms label {
     display: block;
+    position: absolute;
 }
 
 .forms input {
-    float: right;
     display: inline-block;
 }
