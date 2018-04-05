@@ -1,12 +1,12 @@
-.user-forms {
+.forms {
     width: 300px;
 }
 
-.user-forms label {
+.forms label {
     display: block;
 }
 
-.user-forms input {
+.forms input {
     float: right;
     display: inline-block;
 }
