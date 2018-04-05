@@ -2,19 +2,22 @@
 
 {% block content %}
 
-<form action="/" method='POST'>
-    <label for='username'>Username
-        <input type='text' id='username'/>
-    </label>
-    <label for='password'>Password
-        <input type='password' id='password'/>
-    </label>
-    <label for='verify-password'>Verify Password
-        <input type='password' id='verify-password'/>
-    </label>
-    <label for='email'> Email (optional)
-        <input type='text' id='email'/>
-    </label>
-</form>
+<div class="user-forms">
+    <form action="/" method='POST'>
+        <label for='username'>Username
+            <input type='text' id='username'/>
+        </label>
+        <label for='password'>Password
+            <input type='password' id='password'/>
+        </label>
+        <label for='verify-password'>Verify Password
+            <input type='password' id='verify-password'/>
+        </label>
+        <label for='email'> Email (optional)
+            <input type='text' id='email'/>
+        </label>
+        <input type='submit' id='submit'/>
+    </form>
+</div>
 
 {% endblock %}
