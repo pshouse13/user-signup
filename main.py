@@ -46,6 +46,10 @@ def signup():
         email_error = 'This is not a valid email'
     elif " " in email:
         email_error = 'Please do not include spaces'
+    elif '@' and '.' in email:
+        email = email
+    elif email == '':
+        email = email
 
     if not username_error and not password_error and not verify_error and not email_error:
         return render_template('welcome.html', username = username)

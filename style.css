@@ -1,12 +1,9 @@
 .forms {
-    width: 300px;
-}
-
-.forms label {
-    display: block;
     position: absolute;
+    width: 50px;
+    display: inline-block;
 }
 
-.forms input {
-    display: inline-block;
+.error {
+    margin-left: 50px;
 }
