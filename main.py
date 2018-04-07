@@ -41,7 +41,7 @@ def signup():
         verify_error = 'Please provide a matching password'
     elif verify_password != password:
         verify_error = 'Your passwords do not match'
-
+#still need to figure out email validation
     if email == '':
         email = ''
     elif '@' and '.' in email:
