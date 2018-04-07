@@ -17,7 +17,7 @@ def signup():
     password = request.form['password']
     verify_password = request.form['verify_password']
     email = request.form['email']
-
+    
     username_error = ''
     password_error = ''
     verify_error = ''
@@ -42,14 +42,14 @@ def signup():
     elif verify_password != password:
         verify_error = 'Your passwords do not match'
 
-    if len(email) < 3 or len(email) > 20:
+    if email == '':
+        email = ''
+    elif '@' and '.' in email:
+        email = email
+    elif len(email) < 3 or len(email) > 20:
         email_error = 'This is not a valid email'
     elif " " in email:
         email_error = 'Please do not include spaces'
-    elif '@' and '.' in email:
-        email = email
-    elif email == '':
-        email = email
 
     if not username_error and not password_error and not verify_error and not email_error:
         return render_template('welcome.html', username = username)
